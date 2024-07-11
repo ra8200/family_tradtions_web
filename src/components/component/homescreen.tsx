@@ -1,4 +1,4 @@
-export default function Home() {
+export function homescreen() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 md:flex-row">
       <div className="flex flex-col items-center w-full max-w-4xl md:flex-row">
@@ -44,5 +44,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }
