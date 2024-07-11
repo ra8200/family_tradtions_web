@@ -26,6 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           fontBody.variable
         )}
       >
+
         {children}
       </body>
     </html>
