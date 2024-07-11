@@ -1,4 +1,5 @@
-import { Button, Input } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import RecipeCard from '@/components/recipeCard';
 
@@ -6,8 +7,8 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const recipes = [
-    { id: 1, title: 'Spaghetti Carbonara', description: 'A classic Italian pasta dish.' },
-    { id: 2, title: 'Chicken Curry', description: 'A spicy and savory chicken curry.' },
+    { id: 1, name: 'Spaghetti Carbonara', description: 'A classic Italian pasta dish.' },
+    { id: 2, name: 'Chicken Curry', description: 'A spicy and savory chicken curry.' },
     // Add more recipes here...
   ];
 
@@ -26,7 +27,7 @@ const Home = () => {
       </div>
       <div>
         {recipes.map((recipe) => (
-          <RecipeCard key={recipe.id} title={recipe.title} description={recipe.description} />
+          <RecipeCard key={recipe.id} name={recipe.name} description={recipe.description} />
         ))}
       </div>
     </div>
