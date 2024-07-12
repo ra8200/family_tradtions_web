@@ -1,4 +1,11 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
+  const pathname = usePathname();
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 md:flex-row">
       <div className="flex flex-col items-center w-full max-w-4xl md:flex-row">
@@ -30,16 +37,20 @@ export default function Home() {
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
-            <button type="submit" className="w-full py-2 text-white bg-green-600 rounded-md hover:bg-green-700">
-              Log In
-            </button>
+            <Link 
+              href="/home"
+            >
+              <Button type="submit" className="w-full py-2 text-white bg-green-600 rounded-md hover:bg-green-700">
+                Log In
+              </Button>
+            </Link>
             <a href="#" className="block mt-2 text-sm text-blue-600 hover:underline">
               Forgot password?
             </a>
             <hr className="my-6 border-gray-300" />
-            <button type="button" className="w-full py-2 text-white bg-green-600 rounded-md hover:bg-green-700">
+            <Button type="button" className="w-full py-2 text-white bg-green-600 rounded-md hover:bg-green-700">
               Create new account
-            </button>
+            </Button>
           </form>
         </div>
       </div>

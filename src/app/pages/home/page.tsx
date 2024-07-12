@@ -3,7 +3,7 @@ import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import RecipeCard from '@/components/recipeCard';
 
-export default function HomePage () {
+export default function Home () {
   const [searchTerm, setSearchTerm] = useState('');
 
   const recipes = [
