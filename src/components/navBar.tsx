@@ -5,7 +5,7 @@ export default function NavBar() {
     let pathname = usePathname() || '/';
 
     return (
-        <header className="bg-primary text-primary-foreground py-4 px-6 shadow-md">
+        <header className="bg-green-800 text-primary-foreground py-4 px-6 shadow-md">
             <div className="flex items-center justify-between">
                 <Link 
                     href="/" 
@@ -16,7 +16,7 @@ export default function NavBar() {
                 </Link>
                 <nav className="flex items-center gap-6">
                 <Link 
-                    href="/" 
+                    href="/home" 
                     className="text-sm font-medium hover:underline focus:underline" 
                     prefetch={false}
                 >

@@ -1,10 +1,15 @@
+"use client";
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import RecipeCard from '@/components/recipeCard';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Home () {
   const [searchTerm, setSearchTerm] = useState('');
+  const pathname = usePathname();
 
   const recipes = [
     { id: 1, name: 'Spaghetti Carbonara', description: 'A classic Italian pasta dish.' },
@@ -15,8 +20,12 @@ export default function Home () {
   return (
     <div className="p-4">
       <div className="flex space-x-4 mb-4">
-        <Button className="flex-1">Create Recipe Book</Button>
-        <Button className="flex-1">Create Recipe</Button>
+        <Link href="/books/createBook">
+          <Button className="flex-1">Create Recipe Book</Button>
+        </Link>
+        <Link href="/recipes/createRecipe">
+          <Button className="flex-1">Create Recipe</Button>
+        </Link>
       </div>
       <div className="mb-4">
         <Input

@@ -1,6 +1,9 @@
+"use client";
+
 import { Inter } from 'next/font/google'
 import { cn } from '../lib/utils'
 import '../styles/globals.css'
+import NavBar from '@/components/navBar'
 
 const fontHeading = Inter({
   subsets: ['latin'],
@@ -16,7 +19,7 @@ const fontBody = Inter({
 
 import React, { ReactNode } from 'react';
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children } : { children : ReactNode }) {
   return (
     <html lang="en">
       <body 
@@ -26,8 +29,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           fontBody.variable
         )}
       >
-
-        {children}
+        <NavBar />
+            <main 
+              className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'
+            >
+              {children}
+            </main>
       </body>
     </html>
   )
